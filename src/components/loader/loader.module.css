@@ -1,0 +1,10 @@
+.loader {
+    height: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+
+    & > div {
+        height: 100%;
+        display: flex;
+    }
+}

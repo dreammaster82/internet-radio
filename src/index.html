@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="/logo.png" />
+    <link rel="manifest" href="/manifest.json">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#121212" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>" />
+    <link rel="stylesheet" href="/css.css" />
+    <%= htmlWebpackPlugin.options.reactDevTools %>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <div class="top">
+          <a class="logo" href="<%= htmlWebpackPlugin.options.mainHref %>" title="<%= htmlWebpackPlugin.options.description %>">
+            <img src="/logo.png" />
+            <h1 class="head"><%= htmlWebpackPlugin.options.head %></h1>
+          </a>
+        </div>
+      </header>
+      <main>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+      </main>
+    </div>
+  </body>
+</html>

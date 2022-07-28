@@ -1,0 +1,16 @@
+[ignore]
+.*/__tests__/.*
+<PROJECT_ROOT>/server/.*
+<PROJECT_ROOT>/public/.*
+<PROJECT_ROOT>/dist/.*
+.*/node_modules/*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

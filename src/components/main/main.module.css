@@ -1,0 +1,28 @@
+.list-content {
+    flex: 1 1 auto;
+    padding: var(--first-padding);
+
+    & .list {
+        background-color: var(--third-bg);
+        overflow-y: auto;
+        height: 100%;
+        padding: 0;
+
+        & :global(.active) .list-button {
+            background-color: var(--active-bg);
+        }
+    }
+    & .list-button {
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        border-color: var(--third-border);
+
+        &:hover {
+            background-color: var(--active-bg);
+            text-decoration: none;
+        }
+
+        & .cached {
+            color: #c9e4e2;
+        }
+    }
+}

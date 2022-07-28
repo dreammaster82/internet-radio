@@ -1,0 +1,15 @@
+.error {
+    background-color: var(--error-bg) !important;
+}
+.snack-message {
+    display: flex;
+    align-items: center;
+
+    & .snack-message__icon {
+        margin-right: 10px;
+    }
+}
+.snack-message__icon {
+    font-size: 20px;
+    opacity: 0.9;
+}

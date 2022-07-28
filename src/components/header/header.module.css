@@ -1,0 +1,108 @@
+header {
+    & :global .top {
+        display: flex;
+        flex: 1 auto;
+        background-color: var(--second-bg);
+
+        & .logo {
+            flex: 0;
+
+            & + div {
+                flex: 1 auto;
+                text-align: center;
+                margin-right: 24px;
+            }
+        }
+
+        & :local .shuffle {
+            margin-right: 8px;
+
+            @media (min-width: 600px) {
+                margin-right: 10px;
+            }
+
+            & .shuffle-button {
+                width: 48px;
+                height: 48px;
+                background-color: var(--button-bg) !important;
+            }
+        }
+    }
+
+    & .find-input {
+        margin: var(--first-padding);
+        color: var(--second-color);
+        max-width: 600px;
+
+        &:before {
+            border-color: var(--second-color) !important;
+        }
+
+        &:after {
+            border-color: var(--third-color);
+        }
+
+        &.focused {
+            color: var(--third-color);
+        }
+    }
+
+    & audio {
+        height: 48px;
+        width: 100%;
+        outline: none;
+    }
+
+    & .bottom {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0;
+        margin-left: auto;
+        padding: var(--first-padding) var(--first-padding) 0;
+
+        @media (min-width: 600px) {
+            flex-wrap: nowrap;
+            padding: 0;
+        }
+
+        & > div {
+            margin-bottom: 5px;
+        }
+
+        & .controls {
+            flex: 1 1 auto;
+            min-width: 275px;
+            text-align: center;
+            margin-right: 10px;
+
+            @media (min-width: 720px) {
+                min-width: 300px;
+            }
+        }
+    }
+}
+
+.upload-block {
+    & .big-upload {
+        display: none;
+        background-color: var(--button-bg) !important;
+
+        @media (min-width: 720px) {
+            display: inline-flex;
+        }
+    }
+    & .small-upload {
+        display: none;
+        width: 48px;
+        height: 48px;
+        background-color: var(--button-bg) !important;
+
+        @media (min-width: 360px) {
+            display: inline-flex;
+        }
+
+        @media (min-width: 720px) {
+            display: none;
+        }
+    }
+}

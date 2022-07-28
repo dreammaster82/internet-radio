@@ -1,0 +1,119 @@
+:root {
+  --main-bg: #121212;
+  --second-bg: #1f1f1f;
+  --third-bg: #1d1d1d;
+  --list-bg: #272727;
+  --button-bg: #03dac6;
+  --icon-bg: #03dac6;
+  --error-bg: #d32f2f;
+  --active-bg: #2d2d2d;
+
+  --main-color: white;
+  --second-color: #a4a4a4;
+  --third-color: #bb86fc;
+
+  --first-padding: 8px;
+
+  --third-border: #1F1B24
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.loading {
+  position: relative;
+}
+.loading:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: 26px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -26px;
+  margin-top: -26px;
+  animation: hourglass 1.2s infinite;
+}
+@keyframes hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: var(--main-bg);
+  color: var(--main-color);
+  font-size: 14px;
+}
+  #root .icon {
+    color: var(--icon-bg);
+  }
+.hidden {
+  display: none;
+}
+header {
+  flex: 0;
+  display: block;
+  flex-wrap: wrap;
+  padding-top: var(--first-padding);
+}
+  header .logo {
+    max-width: 75px;
+    display: block;
+    color: var(--main-color);
+    text-decoration: none;
+    padding: var(--first-padding);
+  }
+    header .logo img {
+      height: 24px;
+      filter: brightness(6);
+      margin: 8px 0;
+    }
+    header .logo h1 {
+      display: none;
+      text-align: left;
+      font-size: 1.4em;
+      background-color: var(--second-bg);
+      margin: 0 35px 5px 0;
+      font-weight: bold;
+      line-height: 48px;
+    }
+@media (min-width: 600px) {
+  header {
+    padding: var(--first-padding) var(--first-padding) 0;
+    background-color: var(--second-bg);
+    flex-wrap: nowrap;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  header .logo {
+    padding: 0;
+  }
+  header .logo img {
+    float: right;
+  }
+  header .logo h1 {
+    display: block;
+  }
+}
+main {
+  flex: 1;
+}
