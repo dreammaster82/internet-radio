@@ -1,3 +1,6 @@
 node_modules/
 dist/
 .idea/
+config.json
+server/env.json
+public/manifest.json
